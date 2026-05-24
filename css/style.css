@@ -361,6 +361,10 @@ button {
         padding-top: 20px;
     }
 
+    .video-background video{
+        display:none;
+    }
+
     .hero-content h1 {
         font-size: 1.9rem;
     }
@@ -385,7 +389,7 @@ button {
     }
 
     #home {
-        background: url('images/bg_mobile.jpg') center/cover no-repeat;
+        background: url('../images/bg_mobile.jpg') center/cover no-repeat;
         /* Esto asegura que se vea bien sin intentar reproducir video */
     }
 }
