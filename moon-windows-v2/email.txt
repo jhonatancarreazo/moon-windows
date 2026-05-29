@@ -1,0 +1,15 @@
+Nombre: {{name}}
+
+Email: {{email}}
+
+Teléfono: {{phone}}
+
+Servicio: {{service}}
+
+Mensaje: {{message}}
+
+serviceid: service_9096evc
+
+template_kdpnjwo: Template ID
+
+public key: ssi_ZXUvbImnEaPLl

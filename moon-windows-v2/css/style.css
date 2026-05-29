@@ -1,0 +1,954 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #0f172a;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* TOP BAR */
+.top-bar {
+    background-color: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: 102;
+}
+
+.top-bar-left a {
+    text-decoration: none;
+    margin-right: 12px;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.top-bar-right span {
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.top-bar-right span a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+
+/* Header */
+header {
+    position: fixed;
+    top: 40px;
+    left: 0px;
+    width: 100%;
+    padding: 20px 50px;
+    max-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: transparent;
+    /* Totalmente transparente al inicio */
+    box-shadow: none;
+    /* Sin sombra al inicio */
+    transition: all 0.3s ease;
+    /* Animación suave para el cambio */
+    z-index: 101;
+}
+
+header .logo img {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+/* Cuando el usuario pasa el mouse, el logo crece un poco con un efecto elástico */
+header .logo img:hover {
+    transform: scale(1.1) rotate(1deg);
+    /* Crece un 10% y gira 3 grados hacia la derecha */
+}
+
+
+/* Esta clase se activará automáticamente con JavaScript al hacer scroll */
+header.scroll-active {
+    top: 0;
+    background-color: rgba(15, 23, 42, 0.85);
+        /* Se vuelve más oscuro para tapar lo que pasa atrás */
+        backdrop-filter: blur(12px);
+        /* Desenfoque más fuerte */
+        -webkit-backdrop-filter: blur(12px);
+        padding: 12px 50px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.logo img{
+    width: auto;
+    max-width: 80px;
+    height: auto;
+    max-height: 45px;
+    object-fit: contain;
+    
+}
+
+/* --- Botón del menú oculto en escritorio --- */
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Si usaste la opción del header blanco al hacer scroll, el ícono debe volverse oscuro */
+header.scroll-active .menu-toggle {
+    color: white;
+}
+
+/* =========================================
+   Responsive para Móviles y Tablets
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* 1. Ajuste de la Top Bar */
+    .top-bar-left {
+        display: none;
+        /* Ocultamos redes sociales para ahorrar espacio */
+    }
+
+    .top-bar {
+        padding: 8px 15px;
+        justify-content: center;
+        /* Centramos el contacto */
+    }
+
+    .top-bar-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .top-bar-right span {
+        margin-left: 0;
+        font-size: 0.8rem;
+    }
+
+    /* 2. Ajustes del Header y Menú Hamburguesa */
+    header {
+        padding: 15px 20px;
+        top: 55px;
+        /* Ajustamos la distancia de la top-bar móvil */
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Mostramos el botón de hamburguesa */
+    }
+
+    .btn-quote.mobile-hide {
+        display: none;
+        /* Ocultamos el botón "Get Quote" del navbar para dar espacio al menú */
+    }
+
+    /* 3. Estilo del menú desplegable */
+    nav#nav-links {
+        display: none;
+        /* Oculto por defecto */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(15, 23, 42, 0.95);
+        /* Fondo oscuro premium */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Clase que se activa con JavaScript para mostrar el menú */
+    nav#nav-links.active {
+        display: flex;
+    }
+
+    nav#nav-links a {
+        margin: 15px 0;
+        font-size: 1.2rem;
+        color: white !important;
+        /* Forzamos blanco para lectura fácil */
+    }
+
+    /* 4. Ajustes generales de tamaño para móvil */
+    .hero-content h1 {
+        font-size: 2.2rem;
+        padding: 0 15px;
+    }
+
+    .services-section h2,
+    .why-choose-us h2 {
+        font-size: 1.8rem;
+    }
+
+    .area-container {
+        flex-direction: column;
+    }
+
+    .cities-list {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .cities-list li {
+        border-left: none;
+        border-bottom: 2px solid #38bdf8;
+        padding-left: 0;
+        padding-bottom: 5px;
+        display: inline-block;
+    }
+}
+
+
+
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 500;
+}
+nav a::hover{
+    color: rgb(20, 20, 20);
+    font-weight: 300;
+    
+}
+
+.btn-quote {
+    background: #38bdf8;
+    color: white;
+    padding: 10px 24px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.btn-quote:hover {
+    transform: scale(1.05);
+    transition: 1s ease;
+    background-color: #0284c7;
+}
+/* End Header */
+
+/* Hero */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+ .main-logo {
+     margin-bottom: 2rem;
+ }
+
+.hero-content .main-logo {
+    animation: floatLogo 4s ease-in-out infinite;
+    display: inline-block;
+    margin-bottom: 20px;
+    /* Ajusta el espacio con el título */
+    max-width: 150px;
+    /* Controla el tamaño para que no compita con el título */
+}
+
+/* Definición del movimiento de flotación */
+@keyframes floatLogo {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        /* Sube 10 píxeles de forma sutil */
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.2);
+}
+
+
+.hero-content {
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/* BOTÓN MAIN (Centro del Video) */
+.btn-main {
+    background: #38bdf8;
+    color: white;
+    padding: 14px 32px;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(56, 191, 248, 0.443);
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: #0284c7;
+    transform: translateY(-2px);
+}
+
+
+.jump-link {
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+    animation: jumpLoop 1.6s ease-in-out infinite;
+}
+
+@keyframes jumpLoop {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-6px);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+}
+
+.jump-link:hover {
+    animation: none;
+    transform: translateY(0);
+}
+
+.jump-link:active {
+    animation: jumpBounce .5s ease;
+}
+
+@keyframes jumpBounce {
+    0% {
+        transform: translateY(0) scaleY(1);
+    }
+
+    20% {
+        transform: translateY(0) scaleY(.85);
+    }
+
+    40% {
+        transform: translateY(-18px) scaleY(1.05);
+    }
+
+    60% {
+        transform: translateY(4px) scaleY(.95);
+    }
+
+    80% {
+        transform: translateY(-6px) scaleY(1.02);
+    }
+
+    100% {
+        transform: translateY(0) scaleY(1);
+    }
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* En móvil esto usualmente lleva un botón de menú hamburguesa */
+}
+
+
+/* Why Choose Us */
+
+.why-choose-us {
+    padding: 80px 20px;
+    background-color: #d7f2fd;
+    text-align: center;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-choose-us h2 {
+    margin-bottom: 50px;
+    color: #0f172a;
+    font-size: 2rem;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    flex: 1;
+    transition: 0.3s;
+}
+
+.benefit-card:hover {
+    background: #f6f8fa;
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #4fc3f7;
+}
+
+.benefit-card h3 {
+    margin-bottom: 15px;
+    color: #0369a1;
+}
+
+.benefit-card p {
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .benefits-container {
+        flex-direction: column;
+    }
+
+    .why-choose-us h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* End Why Choose Us Section */
+
+
+/* Services Section */
+.services-section {
+    padding: 80px 20px;
+    background-color: #f0fbfd;
+    text-align: center;
+    min-height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.services-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #0f172a;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-card .icon {
+    font-size: 2.5rem;
+    /* Tamaño del icono */
+    margin-bottom: 15px;
+    display: block;
+    
+}
+.service-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 10px 15px rgba(56, 189, 248, 0.1);
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    font-size: 1rem;
+    color: #334155;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+/* Responsivo para móviles y tablets */
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Services area Section */
+.service-area-section {
+    padding: 80px 20px;
+    background: #eef9fd;
+    text-align: center;
+    min-height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.area-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.map-box img{
+    width: 100%;
+    height: auto;
+    border: 1px rgba(0, 145, 255, 0.557) solid;
+    border-radius: 12px;
+}
+
+.cities-list {
+    display: flex;
+    gap: 30px;
+    /* Separación entre columnas de ciudades */
+    text-align: left;
+}
+
+.cities-list ul {
+    list-style: none;
+}
+
+.cities-list li {
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: #475569;
+    padding-left: 15px;
+    border-left: 3px solid #38bdf8;
+    /* Un detalle de diseño tipo "marca" */
+}
+
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .area-container {
+        flex-direction: column;
+    }
+
+    .cities-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cities-list ul {
+        text-align: center;
+    }
+
+    .cities-list li {
+        border-left: none;
+        padding-left: 0;
+    }
+}
+/* End Services area Section */
+
+
+/* =========================================
+   Sección de Galería (Our Work)
+   ========================================= */
+.gallery-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    /* Alternamos el fondo para separar secciones */
+    text-align: center;
+    width: 100%;
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-container h2 {
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.gallery-container p {
+    color: #64748b;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* La magia del CSS Grid para que se adapte a cualquier pantalla */
+.image-grid {
+    display: grid;
+    /* Crea columnas de al menos 280px. Si hay más espacio, añade más columnas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    /* Sombra sutil premium */
+}
+
+.grid-item img,
+.grid-item video {
+    width: 100%;
+    height: 250px;
+    /* Altura fija para que todas las cajas sean iguales */
+    object-fit: cover;
+    /* Evita que las fotos se deformen */
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+/* Efecto de zoom sutil al pasar el mouse (solo en computadoras) */
+@media (hover: hover) {
+    .grid-item:hover img {
+        transform: scale(1.08);
+    }
+}
+
+
+/* Sección Contenedora Principal (Azul claro de la imagen) */
+.footer-top-section {
+    background-color: #e0f2fe;
+    /* Tono celeste suave */
+    padding: 80px 20px;
+    min-height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+/* Bloques individuales */
+.testimonials-block,
+.quote-form-block {
+    flex: 1;
+}
+
+/* --- Whatsapp logo floating --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1001;
+    background-color: #25d366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+.footer-top-section h2 {
+    color: #0f172a;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Tarjetas de Reseñas */
+.review-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.review-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.review-card p {
+    color: #334155;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.yelp-brand {
+    font-size: 0.85rem;
+    color: #c41200;
+    /* Rojo corporativo de Yelp */
+    font-weight: bold;
+}
+
+/* Formulario */
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.quote-form input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.quote-form input:focus {
+    border-color: #0284c7;
+}
+
+.btn-submit {
+    background-color: #0c4a6e;
+    /* Azul oscuro premium del botón */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #0f172a;
+}
+
+/* Footer Oscuro del Final */
+.main-footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 30px 20px;
+    display: flex;
+    max-width: 100%;
+}
+
+.main-footer p{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+
+/* Ajuste para pantallas móviles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .main-footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/* modal */
+/* Tarjeta interactiva: le decimos al usuario que puede hacer clic */
+.service-card {
+    cursor: pointer;
+}
+
+/* Fondo oscuro del modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.6);
+    /* Azul oscuro translúcido */
+    backdrop-filter: blur(5px);
+    /* Desenfoque de fondo premium */
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Por encima de todo, incluyendo el navbar */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Cuando el modal se activa */
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Caja de contenido del Modal */
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Botón de cerrar (X) */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2rem;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: darkblue;
+}
+
+/* Elementos internos del modal */
+.modal-body #modal-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.modal-body h3 {
+    font-size: 1.8rem;
+    color: #0369a1;
+    margin-bottom: 15px;
+}
+
+.modal-body p {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.modal-cta {
+    display: inline-block;
+    padding: 12px 30px;
+    text-align: center;
+}
