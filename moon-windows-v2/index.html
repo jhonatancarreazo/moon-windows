@@ -31,6 +31,9 @@
 </head>
 
 <body>
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
     <!--TOP BAR  -->
     <div class="top-bar">
         <div class="top-bar-left">
@@ -333,7 +336,30 @@
 <script src="js/script.js"></script>
 
 
+<!-- Preloader -->
+<script>
+    function ocultarPreloader() {
+        const preloader = document.getElementById("preloader");
 
+        // Verificamos que el preloader exista y no esté oculto ya
+        if (preloader && preloader.style.display !== "none") {
+            // Le damos una transición suave de desvanecimiento
+            preloader.style.transition = "opacity 0.5s ease";
+            preloader.style.opacity = "0";
+
+            // Esperamos a que termine la animación para quitarlo del diseño
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 500);
+        }
+    }
+
+    // Plan A: Se oculta cuando TODO (incluyendo el video) cargue por completo
+    window.addEventListener("load", ocultarPreloader);
+
+    // Plan B (Failsafe): Si pasan 3 segundos en red lenta, lo quitamos de todos modos
+    setTimeout(ocultarPreloader, 2000); 
+</script>
 </body>
 
 </html>
