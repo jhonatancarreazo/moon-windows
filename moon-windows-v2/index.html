@@ -26,7 +26,32 @@
     <meta property="og:image" content="assets/images/logo.png">
     <meta property="og:type" content="website">
 
-    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WindowCleaningService",
+      "name": "Moon Window Cleaning Services",
+      "image": "https://moonwindowscleaningservices.com/assets/images/logo.png",
+      "telephony": "+13013837379",
+      "email": "moonwindowcleaningservices@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "MD",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.1412, 
+          "longitude": -77.2078
+        },
+        "geoRadius": "50000"
+      },
+      "areaServed": ["Maryland", "Virginia", "Washington DC"],
+      "priceRange": "$$"
+    }
+    </script>
   
 </head>
 
@@ -37,11 +62,11 @@
     <!--TOP BAR  -->
     <div class="top-bar">
         <div class="top-bar-left">
-            <a href="https://www.facebook.com/profile.php?id=100093185883239"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/moonwindowscleaning/"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@moonwindowscleaning"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.yelp.com/biz/moon-windows-cleaning-services-montgomery-village?osq=moon+windows+cleaning+services"><i class="fab fa-yelp"></i></a>
-            <a href="https://linktr.ee/moonwindowscleaning?utm_source=linktree_profile_share&ltsid=a52dbff6-62fa-47d2-b990-9f69bb21cef3"><i class="fab fa-linktree"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100093185883239" aria-label="Facebook Moon Windows Cleaning services"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/moonwindowscleaning/"><i class="fab fa-instagram" aria-label="Instagram Moon Windows Cleaning services"></i></a>
+            <a href="https://www.tiktok.com/@moonwindowscleaning" aria-label="tiktok Moon Windows Cleaning services"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.yelp.com/biz/moon-windows-cleaning-services-montgomery-village?osq=moon+windows+cleaning+services" aria-label="yelp Moon Windows Cleaning services"><i class="fab fa-yelp"></i></a>
+            <a href="https://linktr.ee/moonwindowscleaning?utm_source=linktree_profile_share&ltsid=a52dbff6-62fa-47d2-b990-9f69bb21cef3" aria-label="linktree Moon Windows Cleaning services"><i class="fab fa-linktree"></i></a>
 
         </div>
         <div class="top-bar-right">
@@ -54,7 +79,7 @@
     </div><!--TOP BAR  -->
 
     <header>
-        <div class="logo"><a href="#home"><img src="assets/images/logo.png" alt="Moon Windows Cleaning Services Logo"></a></div>
+        <div class="logo"><a href="#home"><img src="assets/images/logo.webp" alt="Moon Windows Cleaning Services Logo"></a></div>
         <div class="menu-toggle" id="mobile-menu">
             <i class="fas fa-bars"></i>
         </div>
@@ -83,228 +108,246 @@
             GET A QUOTE
         </a>
     </header>
-    <!--Hero section  -->
-    <section id="home" class="hero">
+<main>
+        <!--Hero section  -->
+        <section id="home" class="hero">
         
-        <video autoplay muted loop playsinline preload="metadata" class="video-background">
-            <source src="assets/video/hero-video3_galeria.mp4" type="video/mp4">
-        </video>
-        <div class="hero-content">
-            <img src="assets/images/logo.png" alt="Moon Windows Cleaning Services Logo" class="main-logo">
-            <h1 id="hero-title" data-i18n="hero_title" class="animate__animated">Professional Window Cleaning</h1>
-            <p data-i18n="hero_subtitle">In Maryland, Virginia & DC</p>
-            <a href="#contact-testimonials"  data-i18n="btn_quote" class="btn-main jump-link">GET A QUOTE</a>
-        </div>
+            <video autoplay muted loop playsinline poster="assets/images/bg_mobile.webp" preload="metadata"
+                class="video-background">
+                <source src="assets/video/hero-video3_galeria.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+                <img src="assets/images/logo.webp" alt="Moon Windows Cleaning Services Logo" class="main-logo">
+                <h1 id="hero-title" data-i18n="hero_title" class="animate__animated">Professional Window Cleaning</h1>
+                <p data-i18n="hero_subtitle">In Maryland, Virginia & DC</p>
+                <a href="#contact-testimonials" data-i18n="btn_quote" class="btn-main jump-link">GET A QUOTE</a>
+            </div>
         
         
-    </section>
-<!-- why choose us section -->
-    <section id="about" class="why-choose-us">
-        <h2 data-i18n="why_title">Why Choose</BR> Moon Window Cleaning Services?</h2>
-        <div class="benefits-container">
-            <div class="benefit-card">
-                <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
-                <h3 data-i18n="benefit1_title">Licensed, Insured & Family-Owned</h3>
-                <p data-i18n="benefit1_desc">Your property is in safe hands. We are fully insured and licensed for your peace of mind.</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon"><i class="fas fa-medal"></i></div>
-                <h3 data-i18n="benefit2_title">Results & Value Guaranteed</h3>
-                <p data-i18n="benefit2_desc">We don't leave until you're 100% happy. Quality and attention to detail are at the heart of our service.
-                </p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon"><i class="fab fa-pagelines"></i></div>
-                <h3 data-i18n="benefit3_title">Premium Eco-Friendly Tech</h3>
-                <p data-i18n="benefit3_desc">We use top-tier equipment and eco-friendly products for a streak-free, professional shine every time.</p>
-            </div>
-        </div>
-    </section>
-<!-- End why choose us section -->
-
-<!-- Our Services -->
-<section id="services" class="services-section">
-    <h2 data-i18n="services_title">Our Services</h2>
-    <div class="services-grid">
-        <div class="service-card animate__animated" data-service="residential-commercial">
-            <div class="icon"><img src="assets/icons/ventana.png" alt="Residential & Commercial Window Cleaning" class="service-icon"></div>
-            <h3>Residential & Commercial Window Cleaning</h3>
-        </div>
-        <div class="service-card" data-service="interior-exterior">
-            <div class="icon"><img src="assets/icons/ventana2.png" alt="Interior & Exterior Window Cleaning" class="service-icon"></div>
-            <h3>Interior & Exterior Window Cleaning</h3>
-        </div>
-        <div class="service-card" data-service="screens-cleaning">
-            <div class="icon"><img src="assets/icons/red.png" alt="Screens Cleaning" class="service-icon"></div>
-            <h3>Screens Cleaning</h3>
-        </div>
-        <div class="service-card" data-service="tracks-sills">
-            <div class="icon"><img src="assets/icons/marco.png" alt="Tracks, Sills & Frames Cleaning" class="service-icon"></div>
-            <h3>Tracks, Sills & Frames Cleaning</h3>
-        </div>
-        <div class="service-card" data-service="storm-windows">
-            <div class="icon"><img src="assets/icons/storm.png" alt="Storm Windows Cleaning" class="service-icon"></div>
-            <h3>Storm Windows Cleaning</h3>
-        </div>
-        <div class="service-card" data-service="gutter-cleaning">
-            <div class="icon"><img src="assets/icons/gutter.png" alt="Gutter Cleaning" class="service-icon"></div>
-            <h3>Gutter Cleaning</h3>
-        </div>
-        <div class="service-card" data-service="roof-washing">
-            <div class="icon"><img src="assets/icons/roof.png" alt="Roof Washing" class="service-icon"></div>
-            <h3>Roof Washing</h3>
-        </div>
-        <div class="service-card" data-service="pressure-washing">
-            <div class="icon"><img src="assets/icons/lavadora-a-presion.png" alt="Pressure Washing" class="service-icon"></div>
-            <h3>Pressure Washing</h3>
-        </div>
-        <div class="service-card" data-service="soft-washing">
-            <div class="icon"><img src="assets/icons/soft-washing.png" alt="Soft Washing" class="service-icon"></div>
-            <h3>Soft Washing</h3>
-        </div>
-        <div class="service-card" data-service="sliding-doors">
-            <div class="icon"><img src="assets/icons/sliding-door.png" alt="Sliding Doors & Glass Cleaning" class="service-icon"></div>
-            <h3>Sliding Doors & Glass Cleaning</h3>
-        </div>
-        <div class="service-card" data-service="dirt-stains">
-            <div class="icon"><img src="assets/icons/suciedad.png" alt="Dirt, Stains & Mineral Removal" class="service-icon"></div>
-            <h3>Dirt, Stains & Mineral Removal</h3>
-        </div>
-    </div>
-</section>
-<!-- End Our Services section -->
-
-
-<!-- Our Service Area section -->
-<section id="service-area" class="service-area-section">
-    <h2 data-i18n="service_area_title">Our Service Area</h2>
-    <p data-i18n="service_area_desc">Serving the Heart of Maryland & Surrounding Areas.</p>
-
-    <div class="area-container">
-        <div class="map-box">
-            <img src="assets/images/maryland-map.png" alt="Map of Maryland Service Area">
-        </div>
-
-        <div class="cities-list">
-            <ul>
-                <li>Glen Burnie</li>
-                <li>Annapolis</li>
-                <li>Severna Park</li>
-                <li>Pasadena</li>
-            </ul>
-            <ul>
-                <li>Baltimore</li>
-                <li>Columbia</li>
-                <li>Ellicott City</li>
-                <li>Towson</li>
-            </ul>
-            <ul>
-                <li>Crofton</li>
-                <li>Odenton</li>
-                <li>Bowie</li>
-                <li>Arnold</li>
-            </ul>
-        </div>
-    </div>
-</section>
-<!-- End Our Service Area section -->
-
-<!-- =============== GALLERY SECTION =============== -->
-<section id="gallery" class="gallery-section">
-    <div class="gallery-container">
-        <h2 data-i18n="gallery_title">Our Work</h2>
-        <p data-i18n="gallery_desc">Real results for homes and businesses in Maryland, Virginia & DC.</p>
-
-        <div class="image-grid">
-            <!-- Reemplaza los src con las mejores fotos del cliente -->
-            <div class="grid-item"><img src="assets/images/gallery-1.webp" alt="Window Cleaning Example 1"></div>
-            <div class="grid-item"><img src="assets/images/gallery-2.jpg" alt="Window Cleaning Example 2"></div>
-            <div class="grid-item"><img src="assets/images/gallery-3.jpg" alt="Window Cleaning Example 3"></div>
-            <div class="grid-item"><img src="assets/images/gallery-4.webp" alt="Window Cleaning Example 4"></div>
-            <div class="grid-item">
-                <video autoplay muted loop playsinline poster="assets/images/miniatura-1.png" class="lazy-video">
-                    <source data-src="assets/video/video_galeria.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="grid-item">
-                <video autoplay muted loop playsinline poster="assets/images/miniatura-2.png" class="lazy-video">
-                    <source data-src="assets/video/cleaning2_galeria.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="grid-item">
-                <video autoplay muted loop playsinline poster="assets/images/miniatura-3.png" class="lazy-video">
-                    <source data-src="assets/video/cleaning3_galeria.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="grid-item">
-                <video autoplay muted loop playsinline poster="assets/images/miniatura-4.png" class="lazy-video">
-                    <source data-src="assets/video/cleaning4_galeria.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- contact-testimonials section -->
-
-<section id="contact-testimonials" class="footer-top-section">
-    <div class="footer-container">
-
-        <div class="testimonials-block">
-            <h2 data-i18n="testimonials_title">Client Love</h2>
-
-            <div class="review-card">
-                <div class="elfsight-app-5b784b85-bf8f-4563-8e89-c665b823de64 animar-al-scroll" data-elfsight-app-lazy></div>
-            </div>
-
-        </div>
-
-        <div class="quote-form-block">
-            <h2 data-i18n="quote_title">Get My Free Quote</h2>
-            <form action="#" method="POST" class="quote-form">
-                <div class="input-group">
-                    <input type="text" id="name" name="name" placeholder="Name" data-i18n="placeholder_name" required>
+        </section>
+        <!-- why choose us section -->
+        <section id="about" class="why-choose-us">
+            <h2 data-i18n="why_title">Why Choose</BR> Moon Window Cleaning Services?</h2>
+            <div class="benefits-container">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 data-i18n="benefit1_title">Licensed, Insured & Family-Owned</h3>
+                    <p data-i18n="benefit1_desc">Your property is in safe hands. We are fully insured and licensed for your
+                        peace of mind.</p>
                 </div>
-                <div class="input-group">
-                    <input type="email" id="email" name="email" placeholder="Email" data-i18n="placeholder_email" required>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-medal"></i></div>
+                    <h3 data-i18n="benefit2_title">Results & Value Guaranteed</h3>
+                    <p data-i18n="benefit2_desc">We don't leave until you're 100% happy. Quality and attention to detail are at
+                        the heart of our service.
+                    </p>
                 </div>
-                <div class="input-group">
-                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" data-i18n="placeholder_phone" required>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fab fa-pagelines"></i></div>
+                    <h3 data-i18n="benefit3_title">Premium Eco-Friendly Tech</h3>
+                    <p data-i18n="benefit3_desc">We use top-tier equipment and eco-friendly products for a streak-free,
+                        professional shine every time.</p>
                 </div>
-                <div class="input-group">
-                    <select id="service" name="service" required
-                        style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; background: white;">
-                        <option value="" disabled selected data-i18n="select_service">Select a Service</option>
-                        <option value="Residential & Commercial Window Cleaning">Residential & Commercial Window Cleaning</option>
-                        <option value="Interior & Exterior Window Cleaning">Interior & Exterior Window Cleaning</option>
-                        <option value="Screens Cleaning">Screens Cleaning</option>
-                        <option value="Tracks, Sills & Frames Cleaning">Tracks, Sills & Frames Cleaning</option>
-                        <option value="Storm Windows Cleaning">Storm Windows Cleaning</option>
-                        <option value="Gutter Cleaning">Gutter Cleaning</option>
-                        <option value="Roof Washing">Roof Washing</option>
-                        <option value="Pressure Washing">Pressure Washing</option>
-                        <option value="Soft Washing">Soft Washing</option>
-                        <option value="Sliding Doors & Glass Cleaning">Sliding Doors & Glass Cleaning</option>
-                        <option value="Dirt, Stains & Mineral Removal">Dirt, Stains & Mineral Removal</option>
-                        
-                
-                    </select>
-                </div>
-                <div class="input-group">
-                    <textarea id="message" name="message" placeholder="Message / Details" rows="4" data-i18n="placeholder_message"
-                        style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; font-family: inherit; resize: vertical;"></textarea>
-                </div>
-                <button type="submit" data-i18n="btn_submit" class="btn-submit">GET MY FREE QUOTE</button>
-            </form>
-        </div>
-
+            </div>
+        </section>
+        <!-- End why choose us section -->
         
+        <!-- Our Services -->
+        <section id="services" class="services-section">
+            <h2 data-i18n="services_title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card animate__animated" data-service="residential-commercial">
+                    <div class="icon"><img src="assets/icons/ventana.webp" alt="Residential & Commercial Window Cleaning"
+                            class="service-icon"></div>
+                    <h3>Residential & Commercial Window Cleaning</h3>
+                </div>
+                <div class="service-card" data-service="interior-exterior">
+                    <div class="icon"><img src="assets/icons/ventana2.webp" alt="Interior & Exterior Window Cleaning"
+                            class="service-icon"></div>
+                    <h3>Interior & Exterior Window Cleaning</h3>
+                </div>
+                <div class="service-card" data-service="screens-cleaning">
+                    <div class="icon"><img src="assets/icons/red.webp" alt="Screens Cleaning" class="service-icon"></div>
+                    <h3>Screens Cleaning</h3>
+                </div>
+                <div class="service-card" data-service="tracks-sills">
+                    <div class="icon"><img src="assets/icons/marco.webp" alt="Tracks, Sills & Frames Cleaning"
+                            class="service-icon"></div>
+                    <h3>Tracks, Sills & Frames Cleaning</h3>
+                </div>
+                <div class="service-card" data-service="storm-windows">
+                    <div class="icon"><img src="assets/icons/storm.webp" alt="Storm Windows Cleaning" class="service-icon"></div>
+                    <h3>Storm Windows Cleaning</h3>
+                </div>
+                <div class="service-card" data-service="gutter-cleaning">
+                    <div class="icon"><img src="assets/icons/gutter.webp" alt="Gutter Cleaning" class="service-icon"></div>
+                    <h3>Gutter Cleaning</h3>
+                </div>
+                <div class="service-card" data-service="roof-washing">
+                    <div class="icon"><img src="assets/icons/roof.webp" alt="Roof Washing" class="service-icon"></div>
+                    <h3>Roof Washing</h3>
+                </div>
+                <div class="service-card" data-service="pressure-washing">
+                    <div class="icon"><img src="assets/icons/lavadora-a-presion.png" alt="Pressure Washing"
+                            class="service-icon"></div>
+                    <h3>Pressure Washing</h3>
+                </div>
+                <div class="service-card" data-service="soft-washing">
+                    <div class="icon"><img src="assets/icons/soft-washing.webp" alt="Soft Washing" class="service-icon"></div>
+                    <h3>Soft Washing</h3>
+                </div>
+                <div class="service-card" data-service="sliding-doors">
+                    <div class="icon"><img src="assets/icons/sliding-door.webp" alt="Sliding Doors & Glass Cleaning"
+                            class="service-icon"></div>
+                    <h3>Sliding Doors & Glass Cleaning</h3>
+                </div>
+                <div class="service-card" data-service="dirt-stains">
+                    <div class="icon"><img src="assets/icons/suciedad.webp" alt="Dirt, Stains & Mineral Removal"
+                            class="service-icon"></div>
+                    <h3>Dirt, Stains & Mineral Removal</h3>
+                </div>
+            </div>
+        </section>
+        <!-- End Our Services section -->
+        
+        
+        <!-- Our Service Area section -->
+        <section id="service-area" class="service-area-section">
+            <h2 data-i18n="service_area_title">Our Service Area</h2>
+            <p data-i18n="service_area_desc">Serving the Heart of Maryland & Surrounding Areas.</p>
+        
+            <div class="area-container">
+                <div class="map-box">
+                    <img src="assets/images/maryland-map.png" alt="Map of Maryland Service Area">
+                </div>
+        
+                <div class="cities-list">
+                    <ul>
+                        <li>Glen Burnie</li>
+                        <li>Annapolis</li>
+                        <li>Severna Park</li>
+                        <li>Pasadena</li>
+                    </ul>
+                    <ul>
+                        <li>Baltimore</li>
+                        <li>Columbia</li>
+                        <li>Ellicott City</li>
+                        <li>Towson</li>
+                    </ul>
+                    <ul>
+                        <li>Crofton</li>
+                        <li>Odenton</li>
+                        <li>Bowie</li>
+                        <li>Arnold</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Our Service Area section -->
+        
+        <!-- =============== GALLERY SECTION =============== -->
+        <section id="gallery" class="gallery-section">
+            <div class="gallery-container">
+                <h2 data-i18n="gallery_title">Our Work</h2>
+                <p data-i18n="gallery_desc">Real results for homes and businesses in Maryland, Virginia & DC.</p>
+        
+                <div class="image-grid">
+                    <!-- Reemplaza los src con las mejores fotos del cliente -->
+                    <div class="grid-item"><img src="assets/images/gallery-1.webp" alt="Window Cleaning Example 1"></div>
+                    <div class="grid-item"><img src="assets/images/gallery-2.webp" alt="Window Cleaning Example 2"></div>
+                    <div class="grid-item"><img src="assets/images/gallery-3.webp" alt="Window Cleaning Example 3"></div>
+                    <div class="grid-item"><img src="assets/images/gallery-4.webp" alt="Window Cleaning Example 4"></div>
+                    <div class="grid-item">
+                        <video autoplay muted loop playsinline poster="assets/images/miniatura-1.png" class="lazy-video">
+                            <source data-src="assets/video/video_galeria.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="grid-item">
+                        <video autoplay muted loop playsinline poster="assets/images/miniatura-2.png" class="lazy-video">
+                            <source data-src="assets/video/cleaning2_galeria.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="grid-item">
+                        <video autoplay muted loop playsinline poster="assets/images/miniatura-3.png" class="lazy-video">
+                            <source data-src="assets/video/cleaning3_galeria.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="grid-item">
+                        <video autoplay muted loop playsinline poster="assets/images/miniatura-4.png" class="lazy-video">
+                            <source data-src="assets/video/cleaning4_galeria.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- contact-testimonials section -->
+        
+        <section id="contact-testimonials" class="footer-top-section">
+            <div class="footer-container">
+        
+                <div class="testimonials-block">
+                    <h2 data-i18n="testimonials_title">Client Love</h2>
+        
+                    <div class="review-card">
+                        <div class="elfsight-app-5b784b85-bf8f-4563-8e89-c665b823de64 animar-al-scroll" data-elfsight-app-lazy>
+                        </div>
+                    </div>
+        
+                </div>
+        
+                <div class="quote-form-block">
+                    <h2 data-i18n="quote_title">Get My Free Quote</h2>
+                    <form action="#" method="POST" class="quote-form">
+                        <div class="input-group">
+                            <input type="text" id="name" name="name" placeholder="Name" data-i18n="placeholder_name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" name="email" placeholder="Email" data-i18n="placeholder_email"
+                                required>
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" data-i18n="placeholder_phone"
+                                required>
+                        </div>
+                        <div class="input-group">
+                            <label for="service">Select a Service:</label>
+                            <select id="service" name="service" required
+                                style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; background: white;">
+                                <option value="" disabled selected data-i18n="select_service">Select a Service</option>
+                                <option value="Residential & Commercial Window Cleaning">Residential & Commercial Window
+                                    Cleaning</option>
+                                <option value="Interior & Exterior Window Cleaning">Interior & Exterior Window Cleaning</option>
+                                <option value="Screens Cleaning">Screens Cleaning</option>
+                                <option value="Tracks, Sills & Frames Cleaning">Tracks, Sills & Frames Cleaning</option>
+                                <option value="Storm Windows Cleaning">Storm Windows Cleaning</option>
+                                <option value="Gutter Cleaning">Gutter Cleaning</option>
+                                <option value="Roof Washing">Roof Washing</option>
+                                <option value="Pressure Washing">Pressure Washing</option>
+                                <option value="Soft Washing">Soft Washing</option>
+                                <option value="Sliding Doors & Glass Cleaning">Sliding Doors & Glass Cleaning</option>
+                                <option value="Dirt, Stains & Mineral Removal">Dirt, Stains & Mineral Removal</option>
+        
+        
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" name="message" placeholder="Message / Details" rows="4"
+                                data-i18n="placeholder_message"
+                                style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; font-family: inherit; resize: vertical;"></textarea>
+                        </div>
+                        <button type="submit" data-i18n="btn_submit" class="btn-submit">GET MY FREE QUOTE</button>
+                    </form>
+                </div>
+        
+        
+        
+            </div>
+        </section>
+        <!-- contact-testimonials section -->
 
-    </div>
-</section>
-<!-- contact-testimonials section -->
-
+</main>
 <a href="https://wa.me/13013837379?text=Hello!%20I'm%20interested%20in%20your%20window%20cleaning%20services."
     class="whatsapp-float" target="_blank">
     <img src="assets/icons/WhatsApp.svg" alt="WhatsApp">

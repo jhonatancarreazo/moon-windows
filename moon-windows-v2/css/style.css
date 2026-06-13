@@ -200,7 +200,8 @@ header.scroll-active .menu-toggle {
 
     .top-bar-right span {
         margin-left: 0;
-        font-size: 0.8rem;
+        font-size: 1rem;
+        gap: 2rem;
     }
 
     /* 2. Ajustes del Header y Menú Hamburguesa */
@@ -362,6 +363,17 @@ nav a::hover{
     object-fit: cover;
     z-index: -1;
     filter: brightness(0.2);
+}
+
+@media (max-width: 768px) {
+    .video-background {
+        display: none;
+    }
+
+    .hero {
+        background-image: url('../assets/images/bg_mobile.webp');
+        background-size: cover;
+    }
 }
 
 

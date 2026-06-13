@@ -75,37 +75,37 @@
         "residential-commercial": {
             title: "Residential & Commercial Window Cleaning",
             desc: "Top-tier window cleaning tailored for both cozy homes and commercial buildings. We ensure a spotless, streak-free shine using specialized tools and eco-friendly formulas.",
-            icon: "assets/icons/ventana.png"
+            icon: "assets/icons/ventana.webp"
         },
         "interior-exterior": {
             title: "Interior & Exterior Window Cleaning",
             desc: "A thorough, dual-action cleaning process. We carefully clean the inside of your windows without messing up your home, and wash the outside to remove tough environmental buildup.",
-            icon: "assets/icons/ventana2.png"
+            icon: "assets/icons/ventana2.webp"
         },
         "screens-cleaning": {
             title: "Screens Cleaning",
             desc: "Don't let dirty screens ruin a fresh view. We remove, deep-clean, and rinse your window screens/mosquiteros to eliminate accumulated dust, pollen, and spiderwebs.",
-            icon: "assets/icons/red.png"
+            icon: "assets/icons/red.webp"
         },
         "tracks-sills": {
             title: "Tracks, Sills & Frames Cleaning",
             desc: "Windows aren't truly clean if the frames are dirty. We vacuum and scrub window tracks, sills, and frames to remove deep grime, mold, and bugs, ensuring smooth sliding operations.",
-            icon: "assets/icons/marco.png"
+            icon: "assets/icons/marco.webp"
         },
         "storm-windows": {
             title: "Storm Windows Cleaning",
             desc: "Specialized maintenance for heavy-duty storm windows. We carefully disassemble, clean every layer of glass individually, and reinstall them perfectly to keep your property protected.",
-            icon: "assets/icons/storm.png"
+            icon: "assets/icons/storm.webp"
         },
         "gutter-cleaning": {
             title: "Gutter Cleaning",
             desc: "Prevent severe water damage to your roof and foundation. We clear out all leaves, debris, and muck from your gutters and downspouts, ensuring optimal rain drainage.",
-            icon: "assets/icons/gutter.png"
+            icon: "assets/icons/gutter.webp"
         },
         "roof-washing": {
             title: "Roof Washing",
             desc: "Safely eliminate dark stains, moss, and algae from your roof. Our specialized soft-wash treatment sanitizes your shingles, extending your roof's lifespan and restoring curb appeal.",
-            icon: "assets/icons/roof.png"
+            icon: "assets/icons/roof.webp"
         },
         "pressure-washing": {
             title: "Pressure Washing",
@@ -115,22 +115,22 @@
         "soft-washing": {
             title: "Soft Washing",
             desc: "A safe, low-pressure alternative to heavy pressure washing. Perfect for delicate exterior siding, stucco, and wood, using biodegradable solutions to destroy organic growth without damage.",
-            icon: "assets/icons/soft-washing.png"
+            icon: "assets/icons/soft-washing.webp"
         },
         "sliding-doors": {
             title: "Sliding Doors & Glass Cleaning",
             desc: "Get crystal-clear views on your heavy-traffic areas. We deeply clean large sliding doors, glass entries, and tracks, eliminating smudges, handprints, and pet smears completely.",
-            icon: "assets/icons/sliding-door.png"
+            icon: "assets/icons/sliding-door.webp"
         },
         "dirt-stains": {
             title: "Dirt, Stains & Mineral Removal",
             desc: "Hard water spots and stubborn mineral scaling can permanently etch glass. We use advanced, non-abrasive restoring compounds to erase tough acid rain spots and calcium stains.",
-            icon: "assets/icons/suciedad.png"
+            icon: "assets/icons/suciedad.webp"
         },
         "gutter-cover": {
             title: "Gutter Cover Installation",
             desc: "Tired of cleaning gutters every season? We install high-quality gutter guards that block leaves, twigs, and debris while allowing rainwater to flow freely, reducing maintenance forever.",
-            icon: "assets/icons/gutter-cover.png"
+            icon: "assets/icons/gutter-cover.webp"
         }
     };
 
@@ -443,3 +443,19 @@
 // Ejecutar la función automáticamente cuando la página cargue
 document.addEventListener('DOMContentLoaded', manageLanguage);
 
+
+
+// En tu script.js
+const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+        // Cargar el script de Elfsight solo cuando el usuario hace scroll hacia los testimonios
+        const script = document.createElement("script");
+        script.src = "https://elfsightcdn.com/platform.js";
+        script.async = true;
+        document.body.appendChild(script);
+        observer.disconnect(); // Ya cargó, no necesitamos vigilar más
+    }
+}, { threshold: 0.1 });
+
+// Selecciona tu sección de testimonios
+observer.observe(document.querySelector("#contact-testimonials"));
